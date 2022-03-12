@@ -15,7 +15,7 @@ module.exports = {
                 .setDescription('Banner principale ou de serveur.')
                 .setRequired(true)
                 .addChoice('Principale', 'Principale')),
-                
+
     async execute(interaction) {
         const client = interaction.client;
 
@@ -30,7 +30,7 @@ module.exports = {
         let member = interaction.guild.members.cache.find(member => member.user == user)
 
         let bannerURL;
-        console.log(`${interaction.user.tag} a fait la commande /banner pour voir la banner ${type} de ${user.tag}.`);
+        console.log(`[${new Date().toLocaleTimeString()}] "${interaction.user.tag}" a fait la commande /banner pour voir la banner {${type}} de "${user.tag}".`);
         getUserBanner(user.id, {
             token: token,
             format: "gif"
