@@ -24,7 +24,7 @@ module.exports = {
         interaction.guild.members.fetch({ user, force: true });
         let member = interaction.guild.members.cache.find(member => member.user == user)
 
-        console.log(`${interaction.user.tag} a fait la commande /pp pour voir la pp ${type} de ${user.tag}.`);
+        console.log(`[${new Date().toLocaleTimeString()}] "${interaction.user.tag}" a fait la commande /pp pour voir la pp {${type}} de "${user.tag}".`);
 
         const avatarFormat = { format: 'png', size: 1024 };
         const ppEmbed = {
